@@ -1,0 +1,20 @@
+name: piano
+
+runtime:
+  loading-black-screen: true
+
+audio-synthesizer:
+  tool: oidos
+executable-linker:
+  tool: crinkler
+  args:
+    - /COMPMODE:FAST
+    - /ORDERTRIES:0
+    - /RANGE:gdi32
+    - /RANGE:kernel32
+    - /RANGE:opengl32
+    - /RANGE:user32
+    - /RANGE:winmm
+    - /UNSAFEIMPORT
+shader-minifier:
+  tool: shader-minifier
